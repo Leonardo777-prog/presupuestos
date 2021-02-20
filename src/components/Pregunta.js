@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import Error from "./Error";
 
-const Pregunta = ({ setPresupuesto, setRestante }) => {
+const Pregunta = ({ setPresupuesto, setRestante, setMostartpregunta }) => {
   const [monto, setMonto] = useState(0);
   const [error, setError] = useState(false);
   //Funcion para cambiar el state de monto
@@ -25,6 +25,7 @@ const Pregunta = ({ setPresupuesto, setRestante }) => {
     setError(false);
     setPresupuesto(monto);
     setRestante(monto);
+    setMostartpregunta(false);
   };
 
   return (
